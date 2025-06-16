@@ -1,3 +1,37 @@
+#root {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.nextBtn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  margin: 1rem auto;
+  z-index: 3;
+}
+
+.nextBtn:hover, .nextBtn:focus {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+.nextBtn svg {
+
+  color: white;
+}
+
 .App {
   position: relative;
   min-height: 100vh;
@@ -18,7 +52,7 @@
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5); /* Adjust opacity as needed */
+  background: rgba(0,0,0,0.7); /* Adjust opacity as needed */
   z-index: 2;
   pointer-events: none;
 }
@@ -41,9 +75,32 @@
   }
 }
 
-#root {
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
+
+.nextBtn img, .nextBtn svg {
+  filter: brightness(0) invert(1);
 }
 
+
+.App h2, .App h4, .App h5, .App p {
+  color: #fff;
+  margin-bottom: 0.7em;
+  margin-top: 0.3em;
+}
+
+.App h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.App h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.92;
+}
+
+.App h5, .App p {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
