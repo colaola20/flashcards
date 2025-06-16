@@ -1,0 +1,49 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  box-sizing: border-box;
+  background-image: url('https://static1.howtogeekimages.com/wordpress/wp-content/uploads/csit/2021/05/a477938d.png'); /* Update the path as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); /* Adjust opacity as needed */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.App > * {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 1rem;
+  }
+  .App > * {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+}
+
+#root {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
