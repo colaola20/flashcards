@@ -9,6 +9,7 @@ const App = () => {
   const [index, setIndex] = useState(0);
 
   const getNextQuestion = () => {
+    setIsQuestion(true);
     if (index < flashcards.length - 1) {
       setIndex(index + 1)
     }
@@ -25,7 +26,7 @@ const App = () => {
       <h5>Number of cards: {flashcards.length}</h5>
       <h5>Question #{index + 1}</h5>
       <div onClick={flip}>
-        <Card flashcard={flashcards[index]} question={isQuestion}/>
+        <Card flashcard={flashcards[index]} question={isQuestion} difficulty={flashcards[index].difficulty} imgUrl={flashcards[index].imgUrl}/>
       </div>
       <div>
         <button className='nextBtn' onClick={getNextQuestion} >

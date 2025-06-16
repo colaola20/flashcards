@@ -1,11 +1,11 @@
 .card {
-  background: rgba(76, 33, 169, 0.92);
   border-radius: 18px;
   padding: 2rem 1.5rem;
   margin: 1.5rem auto;
-  max-width: 420px;
+  max-width: 800px;
   min-height: 120px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.2s, transform 0.2s;
@@ -14,12 +14,35 @@
   z-index: 4;
 }
 
+.card-easy {
+  background: rgba(76, 175, 80, 0.92);    /* green */
+}
+.card-medium {
+  background: rgba(255, 193, 7, 0.92);    /* yellow */
+}
+.card-hard {
+  background: rgba(244, 67, 54, 0.92);    /* red */
+}
+
 .card:hover {
   box-shadow: 0 8px 32px rgba(0,0,0,0.28);
   transform: scale(1.03);
 }
 
-@media (max-width: 600px) {
+.card img {
+  display: block;
+  max-width: 220px;
+  max-height: 140px;
+  width: 100%;
+  height: auto;
+  margin: 1rem auto 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  object-fit: cover;
+  background: #fff;
+}
+
+@media (max-width: 800px) {
   .card {
     padding: 1rem;
     font-size: 1rem;
@@ -39,7 +62,7 @@
   word-break: break-word;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .card h2 {
     font-size: 1.1rem;
   }

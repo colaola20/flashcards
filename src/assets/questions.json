@@ -1,51 +1,61 @@
 [
   {
     "question": "What does CPU stand for?",
+    "imgUrl": "https://www.wepc.com/wp-content/uploads/2022/01/ROG-Press-Kit-24.jpg",
     "answer": "Central Processing Unit",
     "difficulty": "easy"
   },
   {
     "question": "What is an algorithm?",
+    "imgUrl": null,
     "answer": "A step-by-step procedure to solve a problem.",
     "difficulty": "easy"
   },
   {
     "question": "What does HTTP stand for?",
+    "imgUrl": null,
     "answer": "HyperText Transfer Protocol",
     "difficulty": "easy"
   },
   {
     "question": "What does OOP stand for in programming?",
+    "imgUrl": null,
     "answer": "Object-Oriented Programming",
     "difficulty": "easy"
   },
   {
     "question": "What is the main role of the Operating System?",
+    "imgUrl": "https://www.cybher.org/wp-content/uploads/2024/08/Operating-Systems.jpg",
     "answer": "It manages hardware, software resources, and processes.",
     "difficulty": "medium"
   },
   {
     "question": "What is the purpose of Big O notation?",
+    "imgUrl": null,
     "answer": "To describe the time/space complexity of an algorithm.",
     "difficulty": "medium"
   },
   {
     "question": "What is a binary search?",
+    "imgUrl": null,
     "answer": "A search algorithm that divides a sorted list in halves.",
     "difficulty": "medium"
   },
   {
     "question": "What is the difference between stack and heap memory?",
+    "imgUrl": null,
     "answer": "Stack is static and fast; heap is dynamic and larger.",
     "difficulty": "hard"
   },
   {
     "question": "What is the difference between == and === in JavaScript?",
+    "imgUrl": null,
     "answer": "== compares value; === compares value and type.",
     "difficulty": "hard"
   },
   {
     "question": "What is recursion in computer science?",
+    "imgUrl": null,
     "answer": "A function that calls itself to solve smaller subproblems.",
     "difficulty": "hard"
   }
