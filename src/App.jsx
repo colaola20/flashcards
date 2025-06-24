@@ -8,17 +8,48 @@ const App = () => {
   const [isQuestion, setIsQuestion] = useState(true);
   const [index, setIndex] = useState(0);
   const [userInput, setUserInput] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const isCorrect = userInput.trim().toLowerCase() === flashcards[index].answer.trim().toLowerCase();
+
+    let inputStyle = {
+    margin: '1rem 0',
+    padding: '0.5rem',
+    fontSize: '1rem',
+    borderRadius: '8px',
+    border: '2px solid #ccc',
+    transition: 'border 0.2s'
+  };
+
+    // Only style after submit
+  if (submitted) {
+    inputStyle.border = isCorrect ? '2px solid #4caf50' : '2px solid #f44336';
+    inputStyle.background = isCorrect ? '#e8f5e9' : '#ffebee';
+  }
+
+  const checkAnswer = () => {
+    setSubmitted(true);
+  }
+
+  const handleInputChange = (e) => {
+    setUserInput(e.target.value);
+    setSubmitted(false);
+  };
 
   const getNextQuestion = () => {
     setIsQuestion(true);
     if (index < flashcards.length - 1) {
       setIndex(index + 1)
+      setUserInput('');
+      setSubmitted(false);
     }
   }
   const getPrevQuestion = () => {
     setIsQuestion(true);
     if (index > 0) {
       setIndex(index - 1)
+      setUserInput('');
+      setSubmitted(false);
     }
   }
 
@@ -40,9 +71,10 @@ const App = () => {
         <input type='text'
         placeholder='Place your answer here...'
         value={userInput}
-        onChange={e => setUserInput(e.target.value)}
-        style={{ margin: '1rem 0', padding: '0.5rem', fontSize: '1rem', borderRadius: '8px', border: '1px solid #ccc' }}
+        onChange={handleInputChange}
+        style={inputStyle}
         />
+        <button onClick={checkAnswer}>Submit</button>
       </div>
       <div className='buttonsArea'>
         <button className='nextBtn' onClick={getPrevQuestion} >
