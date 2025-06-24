@@ -7,11 +7,18 @@ const App = () => {
   console.log(flashcards);
   const [isQuestion, setIsQuestion] = useState(true);
   const [index, setIndex] = useState(0);
+  const [userInput, setUserInput] = useState('');
 
   const getNextQuestion = () => {
     setIsQuestion(true);
     if (index < flashcards.length - 1) {
       setIndex(index + 1)
+    }
+  }
+  const getPrevQuestion = () => {
+    setIsQuestion(true);
+    if (index > 0) {
+      setIndex(index - 1)
     }
   }
 
@@ -28,7 +35,19 @@ const App = () => {
       <div onClick={flip}>
         <Card flashcard={flashcards[index]} question={isQuestion} difficulty={flashcards[index].difficulty} imgUrl={flashcards[index].imgUrl}/>
       </div>
-      <div>
+      <div className='inputBlock'>
+        <h4>Guess the answer here: </h4>
+        <input type='text'
+        placeholder='Place your answer here...'
+        value={userInput}
+        onChange={e => setUserInput(e.target.value)}
+        style={{ margin: '1rem 0', padding: '0.5rem', fontSize: '1rem', borderRadius: '8px', border: '1px solid #ccc' }}
+        />
+      </div>
+      <div className='buttonsArea'>
+        <button className='nextBtn' onClick={getPrevQuestion} >
+          <img src="/src/assets/prev-icon.png" alt="Next" style={{width: '24px', height: '24px'}}/>
+        </button>
         <button className='nextBtn' onClick={getNextQuestion} >
           <img src="/src/assets/next-icon.png" alt="Next" style={{width: '24px', height: '24px'}}/>
         </button>

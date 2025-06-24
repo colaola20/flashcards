@@ -7,6 +7,20 @@ body {
   text-align: center;
 }
 
+.buttonsArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;   /* centers items horizontally */
+  align-items: center;       /* centers items vertically */
+}
+
+.inputBlock{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;   /* centers items horizontally */
+  align-items: center;       /* centers items vertically */
+}
+
 .nextBtn {
   background: rgba(255,255,255,0.15);
   border: none;
@@ -102,6 +116,7 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
   opacity: 0.92;
+  margin-right: 20px;
 }
 
 .App h5, .App p {
