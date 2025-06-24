@@ -48,7 +48,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+https://github.com/user-attachments/assets/400c6b90-f6f2-428f-82f1-5891f939a8bf
+
+
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
