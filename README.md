@@ -7,7 +7,7 @@ is an interactive web app that helps you master computer science concepts using 
 Study key topics like algorithms, memory, programming languages, and more in a fun, randomized format. It’s your personal study partner, quiz master, and learning coach—all in one!
 
 
-Time spent: **X** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Required Features
 
