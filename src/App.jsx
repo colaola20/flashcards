@@ -77,10 +77,16 @@ const App = () => {
         <button onClick={checkAnswer}>Submit</button>
       </div>
       <div className='buttonsArea'>
-        <button className='nextBtn' onClick={getPrevQuestion} >
-          <img src="/src/assets/prev-icon.png" alt="Next" style={{width: '24px', height: '24px'}}/>
+        <button 
+        className='nextBtn' 
+        onClick={getPrevQuestion} 
+        disabled={index === 0} >
+          <img src="/src/assets/prev-icon.png" alt="Previuos" style={{width: '24px', height: '24px'}}/>
         </button>
-        <button className='nextBtn' onClick={getNextQuestion} >
+        <button 
+        className='nextBtn' 
+        onClick={getNextQuestion}
+        disabled={index >= flashcards.length - 1} >
           <img src="/src/assets/next-icon.png" alt="Next" style={{width: '24px', height: '24px'}}/>
         </button>
       </div>
