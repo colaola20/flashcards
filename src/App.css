@@ -19,7 +19,35 @@ body {
   flex-direction: row;
   justify-content: center;   /* centers items horizontally */
   align-items: center;       /* centers items vertically */
+  gap: 1rem;
 }
+
+.inputBlock input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(238, 238, 238, 0.1);
+  background: #474747;
+}
+
+.inputBlock button {
+  padding: 0.7rem 1.2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #4caf50 30%, #2196f3 100%);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
 
 .nextBtn {
   background: rgba(255,255,255,0.15);
@@ -50,7 +78,7 @@ body {
 }
 
 .nextBtn:disabled {
-  opacity: 0.4;
+  opacity: 0.2;
   cursor: not-allowed;
   pointer-events: none;
   background: #888 !important;      /* Gray background */
@@ -98,6 +126,13 @@ body {
   .App {
     padding: 1rem;
   }
+    .inputBlock {
+    flex-direction: column;
+    gap: 0.7rem;
+    }
+    .buttonsArea {
+    gap: 0.7rem;
+  }
   .App > * {
     max-width: 100%;
     font-size: 1rem;
@@ -126,7 +161,6 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
   opacity: 0.92;
-  margin-right: 20px;
 }
 
 .App h5, .App p {
